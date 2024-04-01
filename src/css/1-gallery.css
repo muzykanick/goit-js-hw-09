@@ -1,0 +1,19 @@
+ul {
+    list-style-type: none;
+}
+
+img {
+    display: block;
+    width: 360px;
+    height: 200px;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    row-gap: 24px;
+    column-gap: 24px;
+    background-color: #fff;
+}
