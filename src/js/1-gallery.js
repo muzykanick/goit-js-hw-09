@@ -91,6 +91,12 @@ galleryContainer.insertAdjacentHTML("beforeend", createElement(images));
 const options = {
     captionDelay: 250,
     captionsData: "alt",
+    captionPosition: "bottom",
+    width: 1112,
+    height: 640,
+    animationSpeed: 500,
+    closeButton: true,
+    showCounter: true,
 };
 
 
