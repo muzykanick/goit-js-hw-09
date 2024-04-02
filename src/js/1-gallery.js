@@ -79,7 +79,6 @@ function createElement(arr) {
        <a class="gallery-link" href="${original}">
        <img class="gallery-image"
          src="${preview}"
-         data-source="${original}"
          alt="${description}"
         />
        </a>
@@ -89,19 +88,10 @@ function createElement(arr) {
 
 galleryContainer.insertAdjacentHTML("beforeend", createElement(images));
 
+const options = {
+    captionDelay: 250,
+    captionsData: "alt",
+};
 
 
-function handlerClick(event) {
-    event.preventDefault();
-    if (event.target.nodeName !== "IMG") {
-        return;
-    }
-
-    const originalImage = event.target.dataset.source;
-    const instance = basicLightbox.create(`
-        <img src="${originalImage}" alt="${event.target.description}" width="1112" height="640">
-    `)
-    instance.show();
-}
-
-const lightbox = new SimpleLightbox('.gallery a', { /* options */ });
+const lightbox = new SimpleLightbox(".gallery-link", options);
